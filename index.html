@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canil Valle Tanti Auguri | Especializado em Chihuahuas em Guarulhos - SP</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#FBF9F5',  // Off-white muito claro
+            100: '#FAF7F2', // Creme suave (fundo da logo)
+            200: '#EBE4D8', // Bege claro para bordas/cards
+            300: '#D5C7B3', // Bege médio
+            400: '#90A0B8', // Azul acinzentado suave
+            500: '#4A6282', // Azul médio
+            600: '#2A4063', // Azul elegante
+            700: '#182C48', // Azul Marinho escuro
+            800: '#0E1C30', // Azul Marinho Principal da Logo (#0e1c30)
+            900: '#07101C', // Azul Marinho quase preto
+          }
+        },
+        fontFamily: {
+          serif: ['Cinzel', 'serif'],
+          sans: ['Plus Jakarta Sans', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    section[id] {
+      scroll-margin-top: 313px;
+    }
+    @media (min-width: 640px) {
+      section[id] {
+        scroll-margin-top: 201px;
+      }
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FDFBF7;
+      color: #2E1A0E;
+    }
+    .font-serif {
+      font-family: 'Cinzel', serif;
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F7F2E9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #8B5A2B;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4A2E1B;
+    }
+    .bg-glass {
+      background: rgba(253, 251, 247, 0.92);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER / NAVBAR -->
+
+  
+  <header class="fixed top-0 left-0 w-full z-40 bg-brand-800 border-b border-brand-700 transition-all duration-300">
+    <div class="flex items-center justify-center border-b border-brand-200 bg-white py-2">
+      <a href="#" class="group">
+        <img src="https://imghosting.in/host/6z9ray" alt="Logomarca Oficial Canil Valle Tanti Auguri" class="block h-60 w-60 object-contain mix-blend-multiply opacity-90 sm:h-32 sm:w-72">
+      </a>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center">
+      
+      <!-- Logo -->
+
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-8 text-xs xl:text-sm font-semibold text-white col-start-2 row-start-1 justify-self-center">
+        <a href="#inicio" class="hover:text-brand-200 transition-colors">Início</a>
+        <a href="#sobre" class="hover:text-brand-200 transition-colors">Sobre Nós</a>
+        <a href="#filhotes" class="hover:text-brand-200 transition-colors flex items-center gap-1">
+          <span>Filhotes</span>
+          <span id="badge-filhotes-count" class="bg-brand-600 text-white text-[10px] px-1.5 py-0.5 rounded-full">0</span>
+        </a>
+        <a href="#nova-sede" class="hover:text-brand-200 transition-colors">Nova Sede</a>
+        <a href="#contato" class="hover:text-brand-200 transition-colors">Contato</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden lg:flex items-center gap-3 col-start-3 row-start-1 justify-self-end">
+        <button onclick="openAdminModal()" class="px-3.5 py-2 text-xs font-semibold text-white border border-white/40 rounded-lg hover:bg-white/10 transition-colors flex items-center gap-2">
+          <i class="fa-solid fa-lock text-white"></i> Painel Admin
+        </button>
+        <a href="https://wa.me/5511984755645?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20filhotes%20de%20Chihuahua%20do%20Canil%20Valle%20Tanti%20Auguri." target="_blank" class="px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg text-xs font-bold transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button onclick="toggleMobileMenu()" class="lg:hidden col-start-3 row-start-1 justify-self-end text-white p-2 text-xl focus:outline-none">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-800 border-b border-brand-700 px-6 py-4 space-y-3">
+      <a href="#inicio" onclick="toggleMobileMenu()" class="block text-white font-medium hover:text-brand-200">Início</a>
+      <a href="#sobre" onclick="toggleMobileMenu()" class="block text-white font-medium hover:text-brand-200">Sobre Nós</a>
+      <a href="#filhotes" onclick="toggleMobileMenu()" class="block text-white font-medium hover:text-brand-200">Filhotes Disponíveis</a>
+      <a href="#nova-sede" onclick="toggleMobileMenu()" class="block text-white font-medium hover:text-brand-200">Nova Sede</a>
+      <a href="#contato" onclick="toggleMobileMenu()" class="block text-white font-medium hover:text-brand-200">Contato</a>
+      <div class="pt-3 border-t border-white/20 flex flex-col gap-2">
+        <button onclick="toggleMobileMenu(); openAdminModal()" class="w-full text-center px-4 py-2 text-xs font-semibold text-white border border-white/40 rounded-lg hover:bg-white/10">
+          <i class="fa-solid fa-lock text-white"></i> Painel Administrativo
+        </button>
+        <a href="https://wa.me/5511984755645?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es." target="_blank" class="w-full text-center px-4 py-2 bg-emerald-700 text-white rounded-lg text-xs font-bold flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-[313px] sm:pt-[201px]">
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative overflow-hidden">
+      <div class="relative isolate flex min-h-[760px] items-center overflow-hidden bg-brand-900 sm:min-h-[720px] lg:min-h-[680px]">
+        <img src="https://imghosting.in/host/1u6pie?auto=format&fit=crop&w=2000&q=85" alt="Chihuahua Canil Valle Tanti Auguri" class="absolute inset-0 h-full w-full object-cover object-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-900/55 via-brand-900/60 to-brand-900/90"></div>
+
+        <div class="relative z-10 mx-auto w-full max-w-5xl px-4 py-12 text-center text-white sm:px-6 lg:px-8 lg:py-16">
+        <h1 class="mt-5 font-serif text-3xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+          A excelência e pureza da raça <span class="text-brand-300 italic">Chihuahua</span>.
+        </h1>
+        <p class="mx-auto mt-5 max-w-3xl text-base font-normal leading-relaxed text-white sm:text-lg">
+          Criando amor em pequenas doses em Guarulhos - SP. Nossos filhotes são criados com acompanhamento veterinário diário, estrutura premium higienizada e entregues com total segurança para todo o Brasil.
+        </p>
+        <p class="mt-4 font-serif text-lg font-bold text-white">Chihuahua de Linhagem Exclusiva</p>
+        <p class="text-xs text-brand-200">Temperamento dócil, pedigree garantido e saúde impecável.</p>
+
+        <div class="flex flex-wrap justify-center gap-4 pt-6">
+          <a href="https://wa.me/5511984755645?text=Ol%C3%A1!%20Quero%20conhecer%20os%20filhotes%20de%20Chihuahua%20dispon%C3%ADveis." target="_blank" class="flex items-center gap-3 rounded-xl bg-emerald-700 px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all hover:bg-emerald-800 hover:shadow-xl">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Chamar no WhatsApp</span>
+          </a>
+          <a href="#filhotes" class="flex items-center gap-2 rounded-xl border border-white/50 bg-brand-800/90 px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-brand-900 hover:shadow-lg">
+            <i class="fa-solid fa-dog"></i>
+            <span>Ver Filhotes Disponíveis</span>
+          </a>
+        </div>
+
+      </div>
+      </div>
+
+      <div class="bg-brand-50">
+        <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 gap-4 text-left sm:grid-cols-3">
+            <div class="flex items-center justify-center gap-3 sm:justify-start">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-200/80 text-brand-800">
+                <i class="fa-solid fa-plane-departure text-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-brand-900">Envio Aéreo</p>
+                <p class="text-[11px] text-brand-600">Todo o Brasil</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-3 sm:justify-start">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-200/80 text-brand-800">
+                <i class="fa-solid fa-car text-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-brand-900">Entrega Presencial</p>
+                <p class="text-[11px] text-brand-600">Grande SP</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-3 sm:justify-start">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-200/80 text-brand-800">
+                <i class="fa-solid fa-user-md text-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-brand-900">Veterinários</p>
+                <p class="text-[11px] text-brand-600">Acompanhamento</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFFERENTIALS / SOBRE -->
+    <section id="sobre" class="py-16 bg-white border-y border-brand-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-2">Por que escolher o Valle Tanti Auguri</h2>
+          <p class="font-serif text-2xl sm:text-4xl font-bold text-brand-900">Cuidados amorosos e rigor técnico em cada detalhe</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:border-brand-400 transition-all hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-brand-800 text-brand-100 flex items-center justify-center text-xl mb-4 shadow-sm">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-brand-900 mb-2">Acompanhamento Médico</h3>
+            <p class="text-xs text-brand-700 leading-relaxed">
+              Equipe de veterinários responsáveis dedicados ao bem-estar, vacinação em dia e controle rigoroso de vermifugação.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:border-brand-400 transition-all hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-brand-800 text-brand-100 flex items-center justify-center text-xl mb-4 shadow-sm">
+              <i class="fa-solid fa-sparkles"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-brand-900 mb-2">Higienização Diária</h3>
+            <p class="text-xs text-brand-700 leading-relaxed">
+              Estrutura confortável desinfetada diariamente com produtos específicos e seguros para a proteção dos cães.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:border-brand-400 transition-all hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-brand-800 text-brand-100 flex items-center justify-center text-xl mb-4 shadow-sm">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-brand-900 mb-2">Logística Segura</h3>
+            <p class="text-xs text-brand-700 leading-relaxed">
+              Entregas em mãos na Grande São Paulo e envio aéreo especializado para todos os aeroportos do Brasil.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:border-brand-400 transition-all hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-brand-800 text-brand-100 flex items-center justify-center text-xl mb-4 shadow-sm">
+              <i class="fa-solid fa-ribbon"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-brand-900 mb-2">10+ Anos de História</h3>
+            <p class="text-xs text-brand-700 leading-relaxed">
+              Tradição em Guarulhos-SP formando famílias mais felizes com filhotes de temperamento equilibrado e dentro do padrão.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FILHOTES DISPONÍVEIS (CATÁLOGO) -->
+    <section id="filhotes" class="py-16 bg-brand-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">Nossa Ninhada</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Filhotes Disponíveis</h2>
+            <p class="text-xs text-brand-700 mt-1">Exibindo filhotes disponíveis, com entrega programada e vendidos nos últimos 7 dias.</p>
+          </div>
+
+          <!-- Filtros de busca -->
+          <div class="flex flex-wrap gap-2">
+            <select id="filter-pelo" onchange="renderPuppies()" class="bg-white border border-brand-300 rounded-lg px-3 py-2 text-xs font-semibold text-brand-800 focus:ring-2 focus:ring-brand-500">
+              <option value="">Todos os pelos</option>
+              <option value="curto">Pelo Curto</option>
+              <option value="longo">Pelo Longo</option>
+            </select>
+
+            <select id="filter-disponibilidade" onchange="renderPuppies()" class="bg-white border border-brand-300 rounded-lg px-3 py-2 text-xs font-semibold text-brand-800 focus:ring-2 focus:ring-brand-500">
+              <option value="">Todas as disponibilidades</option>
+              <option value="disponivel">Disponível</option>
+              <option value="data_especifica">Data Específica</option>
+              <option value="vendido">Vendidos Recentemente</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Grid de Filhotes -->
+        <div id="puppies-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Dinamicamente renderizado via JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EM BREVE NOVA SEDE -->
+    <section id="nova-sede" class="py-16 bg-brand-800 text-brand-50 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-6 space-y-4">
+            <span class="inline-block px-3 py-1 bg-brand-600 text-white text-xs font-bold rounded-full uppercase tracking-wider">
+              <i class="fa-solid fa-tree"></i> Em Breve
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold leading-tight text-white">
+              Nova Sede Própria em uma Ampla Chácara
+            </h2>
+            <p class="text-sm text-brand-200 leading-relaxed">
+              Estamos preparando um verdadeiro paraíso no campo para nossos amados Chihuahuas. Um espaço com ampla área verde para recreação, maternidade climatizada de última geração e espaço exclusivo para recepção de clientes.
+            </p>
+            <div class="pt-2 flex items-center gap-2 text-xs text-brand-300 bg-brand-900/60 p-3 rounded-lg border border-brand-700/50">
+              <i class="fa-solid fa-circle-info text-brand-400 text-base"></i>
+              <span>Imagem ilustrativa do sítio. A maquete e fotos do projeto final serão atualizadas em breve.</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="relative rounded-2xl overflow-hidden border-2 border-brand-600 shadow-2xl">
+              <img src="https://imghosting.in/host/uk5sn8?auto=format&fit=crop&w=1000&q=80" alt="Futura Sede Chácara Canil Valle Tanti Auguri" class="w-full h-80 object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-900/80 via-transparent to-transparent flex items-end p-6">
+                <span class="text-xs font-bold text-brand-200"><i class="fa-solid fa-location-dot"></i> Região de Guarulhos/SP</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER SECTION -->
+    <section id="contato" class="py-12 bg-white border-t border-brand-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+          
+          <div>
+            <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+              <div class="w-10 h-10 rounded-full bg-brand-800 text-brand-100 flex items-center justify-center font-serif text-xl font-bold">
+                VT
+              </div>
+              <span class="font-serif text-lg font-bold text-brand-800">Valle Tanti Auguri</span>
+            </div>
+            <p class="text-xs text-brand-600">Canil Especializado na Criação Selecionada de Chihuahua.</p>
+          </div>
+
+          <div class="space-y-2 text-xs text-brand-800">
+            <p><i class="fa-solid fa-location-dot text-brand-600 w-5"></i> Sede: Guarulhos - SP</p>
+            <p><i class="fa-brands fa-whatsapp text-emerald-600 w-5"></i> +55 (11) 98475-5645</p>
+            <p><i class="fa-solid fa-truck text-brand-600 w-5"></i> Entregas em SP e Todo o Brasil</p>
+          </div>
+
+          <div class="flex justify-center md:justify-end gap-3">
+            <a href="https://wa.me/5511984755645" target="_blank" class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-700 transition-colors">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+            <button onclick="openAdminModal()" class="w-10 h-10 rounded-full bg-brand-800 text-brand-100 flex items-center justify-center hover:bg-brand-900 transition-colors" title="Acesso do Administrador">
+              <i class="fa-solid fa-user-gear"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-brand-900 text-brand-400 text-xs py-6 border-t border-brand-800 text-center">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>&copy; 2026 Canil Valle Tanti Auguri - Todos os direitos reservados. Especialistas em Chihuahua.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/5511984755645?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20filhotes." target="_blank" class="fixed bottom-6 right-6 z-30 bg-emerald-600 text-white p-4 rounded-full shadow-2xl hover:bg-emerald-700 transition-all hover:scale-110 flex items-center justify-center group" title="Falar no WhatsApp">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-xs font-bold pl-0 group-hover:pl-2">
+      Falar no WhatsApp
+    </span>
+  </a>
+
+  <!-- MODAL: DETALHES DO FILHOTE -->
+  <div id="modal-puppy-details" class="fixed inset-0 z-50 bg-black/60 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+      <button onclick="closePuppyModal()" class="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white text-brand-800 w-8 h-8 rounded-full flex items-center justify-center font-bold">✕</button>
+      
+      <div id="modal-puppy-content" class="p-6">
+        <!-- Renderizado via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: SISTEMA ADMINISTRATIVO (LOGIN & DASHBOARD) -->
+  <div id="modal-admin" class="fixed inset-0 z-50 bg-black/70 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-5xl w-full max-h-[92vh] flex flex-col shadow-2xl relative overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="bg-brand-800 text-white px-6 py-4 flex items-center justify-between border-b border-brand-700">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-shield-dog text-brand-300 text-xl"></i>
+          <div>
+            <h3 class="font-serif font-bold text-lg">Painel Administrativo</h3>
+            <p class="text-[11px] text-brand-200">Canil Valle Tanti Auguri - Sistema de Gestão</p>
+          </div>
+        </div>
+        <button onclick="closeAdminModal()" class="text-brand-300 hover:text-white text-xl">✕</button>
+      </div>
+
+      <div class="p-6 overflow-y-auto flex-1 bg-brand-50">
+
+        <!-- TELA 1: LOGIN -->
+        <div id="admin-login-view" class="max-w-md mx-auto py-8">
+          <div class="bg-white p-8 rounded-2xl border border-brand-200 shadow-md">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 rounded-full bg-brand-100 text-brand-800 flex items-center justify-center mx-auto text-2xl font-serif font-bold mb-2">
+                VT
+              </div>
+              <h4 class="font-serif font-bold text-xl text-brand-900">Acesso Restrito</h4>
+              <p class="text-xs text-brand-600">Entre com suas credenciais de administrador</p>
+            </div>
+
+            <form onsubmit="handleLogin(event)" class="space-y-4">
+              <div>
+                <label class="block text-xs font-bold text-brand-800 mb-1">Usuário</label>
+                <input type="text" id="login-user" required value="admin" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs focus:ring-2 focus:ring-brand-600">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-brand-800 mb-1">Senha</label>
+                <input type="password" id="login-pass" required value="admin123" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs focus:ring-2 focus:ring-brand-600">
+              </div>
+              <button type="submit" class="w-full py-2.5 bg-brand-800 hover:bg-brand-900 text-white text-xs font-bold rounded-lg shadow transition-colors">
+                Entrar no Painel
+              </button>
+            </form>
+            <p class="text-[10px] text-center text-brand-500 mt-4">Dica para teste: Usuário: <span class="font-mono">admin</span> | Senha: <span class="font-mono">admin123</span></p>
+          </div>
+        </div>
+
+        <!-- TELA 2: DASHBOARD ADMIN -->
+        <div id="admin-dashboard-view" class="hidden space-y-6">
+          
+          <!-- Tabs Navigation -->
+          <div class="flex flex-wrap items-center justify-between gap-4 border-b border-brand-200 pb-4">
+            <div class="flex gap-2">
+              <button onclick="switchAdminTab('dogs')" id="tab-btn-dogs" class="px-4 py-2 text-xs font-bold rounded-lg bg-brand-800 text-white">
+                <i class="fa-solid fa-dog mr-1"></i> Gestão de Filhotes
+              </button>
+              <button onclick="switchAdminTab('vendas')" id="tab-btn-vendas" class="px-4 py-2 text-xs font-bold rounded-lg bg-brand-200 text-brand-800 hover:bg-brand-300">
+                <i class="fa-solid fa-file-invoice-dollar mr-1"></i> Registrar Venda
+              </button>
+              <button onclick="switchAdminTab('relatorio')" id="tab-btn-relatorio" class="px-4 py-2 text-xs font-bold rounded-lg bg-brand-200 text-brand-800 hover:bg-brand-300">
+                <i class="fa-solid fa-list-check mr-1"></i> Histórico de Vendas
+              </button>
+              <button onclick="switchAdminTab('supabase')" id="tab-btn-supabase" class="px-4 py-2 text-xs font-bold rounded-lg bg-brand-200 text-brand-800 hover:bg-brand-300">
+                <i class="fa-solid fa-database mr-1"></i> Config. Supabase
+              </button>
+            </div>
+            
+            <button onclick="logoutAdmin()" class="px-3 py-1.5 text-xs text-red-700 hover:text-red-900 font-bold flex items-center gap-1">
+              <i class="fa-solid fa-right-from-bracket"></i> Sair
+            </button>
+          </div>
+
+          <!-- TAB CONTENT 1: GESTÃO DE FILHOTES -->
+          <div id="admin-tab-dogs" class="space-y-4">
+            <div class="flex justify-between items-center">
+              <h4 class="font-serif font-bold text-lg text-brand-900">Filhotes Cadastrados</h4>
+              <button onclick="openDogFormModal()" class="px-3 py-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-lg flex items-center gap-1">
+                <i class="fa-solid fa-plus"></i> Novo Filhote
+              </button>
+            </div>
+
+            <!-- Tabela de Dogs -->
+            <div class="bg-white rounded-xl border border-brand-200 overflow-x-auto shadow-sm">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-brand-100 text-brand-900 font-bold border-b border-brand-200">
+                  <tr>
+                    <th class="p-3">Foto</th>
+                    <th class="p-3">Nome / Raça</th>
+                    <th class="p-3">Idade</th>
+                    <th class="p-3">Pelo / Cor</th>
+                    <th class="p-3">Pedigree</th>
+                    <th class="p-3">Status</th>
+                    <th class="p-3 text-right">Ações</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-dogs-table-body" class="divide-y divide-brand-200">
+                  <!-- Renderizado via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB CONTENT 2: REGISTRAR VENDA -->
+          <div id="admin-tab-vendas" class="hidden space-y-4 max-w-2xl mx-auto bg-white p-6 rounded-xl border border-brand-200">
+            <h4 class="font-serif font-bold text-lg text-brand-900 border-b border-brand-200 pb-2">Registrar Nova Venda de Filhote</h4>
+            
+            <form onsubmit="handleRegistrarVenda(event)" class="space-y-4">
+              <div>
+                <label class="block text-xs font-bold text-brand-800 mb-1">Selecione o Filhote *</label>
+                <select id="venda-dog-id" required class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs font-medium">
+                  <option value="">-- Escolha o Filhote --</option>
+                  <!-- Renderizado via JS -->
+                </select>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-brand-800 mb-1">CPF do Cliente *</label>
+                  <input type="text" id="venda-cliente-cpf" required placeholder="000.000.000-00" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-brand-800 mb-1">Nome Completo do Cliente *</label>
+                  <input type="text" id="venda-cliente-nome" required placeholder="Ex: Maria Silva" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-brand-800 mb-1">Telefone / WhatsApp *</label>
+                  <input type="text" id="venda-cliente-tel" required placeholder="(11) 99999-9999" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-brand-800 mb-1">Valor Final da Venda (R$) *</label>
+                  <input type="number" step="0.01" id="venda-valor" required placeholder="Ex: 3500.00" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-brand-800 mb-1">Endereço Completo do Cliente *</label>
+                <input type="text" id="venda-cliente-endereco" required placeholder="Rua, Número, Bairro, Cidade - UF" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-brand-800 mb-1">Tipo de Entrega *</label>
+                <select id="venda-tipo-entrega" required class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+                  <option value="Aéreo">Envio Aéreo (Aeroporto mais próximo)</option>
+                  <option value="Carro">Entrega em mãos / Carro (Grande SP)</option>
+                  <option value="Cliente busca">Cliente busca no Canil (Guarulhos-SP)</option>
+                </select>
+              </div>
+
+              <button type="submit" class="w-full py-3 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs rounded-lg shadow">
+                Confirmar e Concluir Venda
+              </button>
+            </form>
+          </div>
+
+          <!-- TAB CONTENT 3: RELATÓRIO DE VENDAS -->
+          <div id="admin-tab-relatorio" class="hidden space-y-4">
+            <h4 class="font-serif font-bold text-lg text-brand-900">Histórico de Vendas Realizadas</h4>
+            
+            <div class="bg-white rounded-xl border border-brand-200 overflow-x-auto shadow-sm">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-brand-100 text-brand-900 font-bold border-b border-brand-200">
+                  <tr>
+                    <th class="p-3">Data</th>
+                    <th class="p-3">Filhote</th>
+                    <th class="p-3">Cliente / CPF</th>
+                    <th class="p-3">Telefone</th>
+                    <th class="p-3">Entrega</th>
+                    <th class="p-3">Valor</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-vendas-table-body" class="divide-y divide-brand-200">
+                  <!-- Renderizado via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB CONTENT 4: CONFIGURAÇÃO SUPABASE -->
+          <div id="admin-tab-supabase" class="hidden space-y-4 max-w-xl mx-auto bg-white p-6 rounded-xl border border-brand-200">
+            <h4 class="font-serif font-bold text-lg text-brand-900 border-b border-brand-200 pb-2">Configuração da API Supabase</h4>
+            <p class="text-xs text-brand-700">Conecte sua conta do Supabase para sincronização em tempo real. Se deixado em branco, o sistema usará o banco de dados simulado via LocalStorage.</p>
+
+            <div class="space-y-4 pt-2">
+              <div>
+                <label class="block text-xs font-bold text-brand-800 mb-1">Supabase URL</label>
+                <input type="text" id="supabase-url" placeholder="https://xyzcompany.supabase.co" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs font-mono">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-brand-800 mb-1">Supabase Anon Key</label>
+                <input type="password" id="supabase-key" placeholder="eyJhbGciOiJIUzI1NiIsInR..." class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs font-mono">
+              </div>
+
+              <button onclick="saveSupabaseConfig()" class="w-full py-2.5 bg-brand-800 hover:bg-brand-900 text-white font-bold text-xs rounded-lg shadow">
+                Salvar Configurações
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: FORMULÁRIO DE CADASTRO/EDIÇÃO DE FILHOTE -->
+  <div id="modal-dog-form" class="fixed inset-0 z-50 bg-black/70 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative p-6">
+      <div class="flex justify-between items-center border-b border-brand-200 pb-3 mb-4">
+        <h3 id="modal-dog-form-title" class="font-serif font-bold text-lg text-brand-900">Cadastrar Novo Filhote</h3>
+        <button onclick="closeDogFormModal()" class="text-brand-600 hover:text-brand-900 font-bold">✕</button>
+      </div>
+
+      <form onsubmit="handleSaveDog(event)" class="space-y-4">
+        <input type="hidden" id="dog-form-id">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-brand-800 mb-1">Nome / Identificação *</label>
+            <input type="text" id="dog-nome" required placeholder="Ex: Bob, Cristal, Thor" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-brand-800 mb-1">Raça / Variação *</label>
+            <select id="dog-raca" required class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+              <option value="Chihuahua Pelo Longo">Chihuahua Pelo Longo</option>
+              <option value="Chihuahua Pelo Curto">Chihuahua Pelo Curto</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-brand-800 mb-1">Idade (dias) *</label>
+            <input type="number" id="dog-idade" min="1" max="24" required placeholder="Ex: 2" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-brand-800 mb-1">Tipo de Pelo *</label>
+            <select id="dog-pelo" required class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+              <option value="curto">Curto</option>
+              <option value="longo">Longo</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-brand-800 mb-1">Pedigree *</label>
+            <select id="dog-pedigree" required class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+              <option value="sim">Sim (CBKC / FCI)</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-brand-800 mb-1">Cor da Pelagem *</label>
+            <input type="text" id="dog-cor-pelagem" required placeholder="Ex: Creme, Chocolate, Preto e Tan, Azul" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-brand-800 mb-1">Cor dos Olhos *</label>
+            <input type="text" id="dog-cor-olhos" required placeholder="Ex: Castanhos, Verdes, Azuis" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-brand-800 mb-1">Disponibilidade *</label>
+            <select id="dog-disponibilidade" required onchange="toggleDataEspecificaField()" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+              <option value="disponivel">Disponível para Entrega</option>
+              <option value="data_especifica">Data Específica de Reserva</option>
+              <option value="vendido">Vendido</option>
+            </select>
+          </div>
+          <div id="wrapper-data-especifica" class="hidden">
+            <label class="block text-xs font-bold text-brand-800 mb-1">Data de Liberação / Reserva</label>
+            <input type="date" id="dog-data-especifica" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-brand-800 mb-1">URL da Foto Principal *</label>
+          <input type="url" id="dog-foto" required placeholder="https://images.unsplash.com/..." class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-brand-800 mb-1">Descrição e Detalhes Adicionais</label>
+          <textarea id="dog-detalhes" rows="3" placeholder="Temperamento, vacinas tomadas, observações especiais..." class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs"></textarea>
+        </div>
+
+        <div class="flex justify-end gap-2 pt-2">
+          <button type="button" onclick="closeDogFormModal()" class="px-4 py-2 border border-brand-300 text-brand-800 rounded-lg text-xs font-bold">Cancelar</button>
+          <button type="submit" class="px-5 py-2 bg-brand-800 hover:bg-brand-900 text-white rounded-lg text-xs font-bold">Salvar Filhote</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // INITIAL MOCK DATA
+    const DEFAULT_DOGS = [
+      {
+        id: '1',
+        nome: 'Valle Bella',
+        raca: 'Chihuahua Micro',
+        idade_meses: 2,
+        pelo: 'longo',
+        cor_pelagem: 'Creme Dourado',
+        cor_olhos: 'Castanhos Cluros',
+        pedigree: 'sim',
+        disponibilidade: 'disponivel',
+        data_especifica: '',
+        foto: 'https://images.unsplash.com/photo-1591824438708-ce405f36ba3d?auto=format&fit=crop&w=600&q=80',
+        detalhes: 'Filhote fêmea super dócil, vermifugada e com a 1ª dose de vacina V10 importada. Ótima linhagem com pedigree CBKC.',
+        created_at: new Date().toISOString()
+      },
+      {
+        id: '2',
+        nome: 'Valle Thor',
+        raca: 'Chihuahua Padrão',
+        idade_meses: 3,
+        pelo: 'curto',
+        cor_pelagem: 'Chocolate & Tan',
+        cor_olhos: 'Castanhos',
+        pedigree: 'sim',
+        disponibilidade: 'disponivel',
+        data_especifica: '',
+        foto: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80',
+        detalhes: 'Macho de pelo curto, muito brincalhão e saudável. Ideal para apartamentos. Pais no local.',
+        created_at: new Date().toISOString()
+      },
+      {
+        id: '3',
+        nome: 'Valle Luna',
+        raca: 'Chihuahua Exótico',
+        idade_meses: 2,
+        pelo: 'longo',
+        cor_pelagem: 'Branco Prata e Castanho',
+        cor_olhos: 'Verdes',
+        pedigree: 'sim',
+        disponibilidade: 'data_especifica',
+        data_especifica: '2026-10-15',
+        foto: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80',
+        detalhes: 'Fêmea disponível para reserva. Liberação programada com vacinação completa e microchip.',
+        created_at: new Date().toISOString()
+      },
+      {
+        id: '4',
+        nome: 'Valle Milo',
+        raca: 'Chihuahua Micro',
+        idade_meses: 4,
+        pelo: 'curto',
+        cor_pelagem: 'Dourado Intenso',
+        cor_olhos: 'Castanhos',
+        pedigree: 'sim',
+        disponibilidade: 'vendido',
+        data_venda: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString().split('T')[0], // 2 dias atrás
+        foto: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=600&q=80',
+        detalhes: 'Vendido para família em Moema - SP. Entrega presencial realizada.',
+        created_at: new Date().toISOString()
+      }
+    ];
+
+    const DEFAULT_VENDAS = [
+      {
+        id: 'v1',
+        dog_id: '4',
+        dog_nome: 'Valle Milo',
+        cliente_cpf: '123.456.789-00',
+        cliente_nome: 'Fernanda Oliveira',
+        cliente_tel: '(11) 98888-7777',
+        cliente_endereco: 'Alameda Santos, 1200 - Jardins, São Paulo - SP',
+        valor: 3800.00,
+        tipo_entrega: 'Carro',
+        data_venda: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
+      }
+    ];
+
+    // STATE MANAGEMENT
+    let dogsData = [];
+    let vendasData = [];
+    let isAdminLoggedIn = false;
+
+    // LOCAL STORAGE INIT
+    function initDatabase() {
+      const storedDogs = localStorage.getItem('vt_dogs');
+      if (storedDogs) {
+        dogsData = JSON.parse(storedDogs);
+      } else {
+        dogsData = DEFAULT_DOGS;
+        localStorage.setItem('vt_dogs', JSON.stringify(dogsData));
+      }
+
+      const storedVendas = localStorage.getItem('vt_vendas');
+      if (storedVendas) {
+        vendasData = JSON.parse(storedVendas);
+      } else {
+        vendasData = DEFAULT_VENDAS;
+        localStorage.setItem('vt_vendas', JSON.stringify(vendasData));
+      }
+    }
+
+    function saveDogsState() {
+      localStorage.setItem('vt_dogs', JSON.stringify(dogsData));
+      renderPuppies();
+      if (isAdminLoggedIn) renderAdminDogsTable();
+    }
+
+    function saveVendasState() {
+      localStorage.setItem('vt_vendas', JSON.stringify(vendasData));
+      if (isAdminLoggedIn) renderAdminVendasTable();
+    }
+
+    // RENDER PUPPIES ON LANDING PAGE
+    function renderPuppies() {
+      const grid = document.getElementById('puppies-grid');
+      const peloFilter = document.getElementById('filter-pelo').value;
+      const dispFilter = document.getElementById('filter-disponibilidade').value;
+
+      const now = new Date();
+
+      // Filter logic including max 7 days after sale date rule
+      const filtered = dogsData.filter(dog => {
+        // Filter pelo
+        if (peloFilter && dog.pelo !== peloFilter) return false;
+
+        // Filter disponibilidade
+        if (dispFilter && dog.disponibilidade !== dispFilter) return false;
+
+        // Rule: Show sold dogs only up to 7 days after sale
+        if (dog.disponibilidade === 'vendido' && dog.data_venda) {
+          const saleDate = new Date(dog.data_venda);
+          const diffDays = (now - saleDate) / (1000 * 3600 * 24);
+          if (diffDays > 7) return false;
+        }
+
+        return true;
+      });
+
+      // Update badge count
+      document.getElementById('badge-filhotes-count').innerText = filtered.length;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-12 bg-white rounded-2xl border border-brand-200">
+            <i class="fa-solid fa-dog text-4xl text-brand-300 mb-2"></i>
+            <p class="text-sm font-bold text-brand-800">Nenhum filhote encontrado com os filtros selecionados.</p>
+            <p class="text-xs text-brand-600 mt-1">Entre em contato via WhatsApp para consultar ninhadas futuras!</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(dog => {
+        let badgeColor = 'bg-emerald-600';
+        let statusLabel = 'Disponível';
+
+        if (dog.disponibilidade === 'data_especifica') {
+          badgeColor = 'bg-amber-600';
+          statusLabel = `Liberação: ${dog.data_especifica ? formatDate(dog.data_especifica) : 'Em breve'}`;
+        } else if (dog.disponibilidade === 'vendido') {
+          badgeColor = 'bg-gray-600';
+          statusLabel = 'Vendido';
+        }
+
+        const msgWhatsapp = encodeURIComponent(`Olá! Tenho interesse no filhote ${dog.nome} (${dog.raca}, Pelo ${dog.pelo}, Cor ${dog.cor_pelagem}). Gostaria de mais informações.`);
+
+        return `
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-200 hover:shadow-xl transition-all flex flex-col justify-between group">
+            <div class="relative overflow-hidden">
+              <img src="${dog.foto}" alt="${dog.nome}" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1591824438708-ce405f36ba3d?auto=format&fit=crop&w=600&q=80'">
+              <span class="absolute top-3 right-3 text-[11px] font-bold text-white px-2.5 py-1 rounded-full shadow-md ${badgeColor}">
+                ${statusLabel}
+              </span>
+              <span class="absolute bottom-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-[10px] px-2.5 py-1 rounded-md font-semibold">
+                ${dog.idade_meses} ${dog.idade_meses === 1 ? 'mês' : 'meses'}
+              </span>
+            </div>
+
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="font-serif font-bold text-lg text-brand-900">${dog.nome}</h3>
+                  <span class="text-[10px] font-bold text-brand-700 bg-brand-100 px-2 py-0.5 rounded">
+                    Pedigree ${dog.pedigree === 'sim' ? 'CBKC' : 'Sem'}
+                  </span>
+                </div>
+                <p class="text-xs text-brand-600 font-semibold mb-3">${dog.raca}</p>
+
+                <div class="grid grid-cols-2 gap-2 text-[11px] bg-brand-50 p-2.5 rounded-lg border border-brand-100">
+                  <div><span class="text-brand-500 font-medium">Pelo:</span> <strong class="text-brand-800 capitalize">${dog.pelo}</strong></div>
+                  <div><span class="text-brand-500 font-medium">Cor:</span> <strong class="text-brand-800">${dog.cor_pelagem}</strong></div>
+                  <div class="col-span-2"><span class="text-brand-500 font-medium">Olhos:</span> <strong class="text-brand-800">${dog.cor_olhos}</strong></div>
+                </div>
+              </div>
+
+              <div class="pt-2 flex gap-2">
+                <button onclick="openPuppyModal('${dog.id}')" class="flex-1 py-2 bg-brand-100 hover:bg-brand-200 text-brand-900 text-xs font-bold rounded-lg transition-colors">
+                  Ver Detalhes
+                </button>
+                <a href="https://wa.me/5511984755645?text=${msgWhatsapp}" target="_blank" class="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-1" title="Tenho Interesse">
+                  <i class="fa-brands fa-whatsapp text-sm"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // MODAL DETALHES FILHOTE
+    function openPuppyModal(dogId) {
+      const dog = dogsData.find(d => d.id === dogId);
+      if (!dog) return;
+
+      const msgWhatsapp = encodeURIComponent(`Olá! Gostaria de tirar dúvidas sobre o filhote ${dog.nome} (Ref #${dog.id}).`);
+
+      const content = document.getElementById('modal-puppy-content');
+      content.innerHTML = `
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <img src="${dog.foto}" alt="${dog.nome}" class="w-full h-72 md:h-full object-cover rounded-xl border border-brand-200" onerror="this.src='https://images.unsplash.com/photo-1591824438708-ce405f36ba3d?auto=format&fit=crop&w=600&q=80'">
+          
+          <div class="space-y-4">
+            <div>
+              <span class="text-xs font-bold text-brand-600 uppercase">${dog.raca}</span>
+              <h3 class="font-serif text-2xl font-bold text-brand-900">${dog.nome}</h3>
+            </div>
+
+            <div class="space-y-2 text-xs text-brand-800">
+              <div class="flex justify-between py-1 border-b border-brand-200">
+                <span class="text-brand-600">Idade:</span>
+                <span class="font-bold">${dog.idade_meses} meses</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-brand-200">
+                <span class="text-brand-600">Tipo de Pelo:</span>
+                <span class="font-bold capitalize">Pelo ${dog.pelo}</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-brand-200">
+                <span class="text-brand-600">Cor da Pelagem:</span>
+                <span class="font-bold">${dog.cor_pelagem}</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-brand-200">
+                <span class="text-brand-600">Cor dos Olhos:</span>
+                <span class="font-bold">${dog.cor_olhos}</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-brand-200">
+                <span class="text-brand-600">Pedigree Registro:</span>
+                <span class="font-bold">${dog.pedigree === 'sim' ? 'Sim (Pedigree CBKC)' : 'Não'}</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-brand-200">
+                <span class="text-brand-600">Status de Disponibilidade:</span>
+                <span class="font-bold capitalize">${dog.disponibilidade.replace('_', ' ')}</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-brand-700 bg-brand-50 p-3 rounded-lg border border-brand-200">
+              ${dog.detalhes || 'Filhote saudável, vermifugado e criado com ração super premium.'}
+            </p>
+
+            <a href="https://wa.me/5511984755645?text=${msgWhatsapp}" target="_blank" class="w-full py-3 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-lg transition-colors">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              Falar com o Criador no WhatsApp
+            </a>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('modal-puppy-details').classList.remove('hidden');
+      document.getElementById('modal-puppy-details').classList.add('flex');
+    }
+
+    function closePuppyModal() {
+      document.getElementById('modal-puppy-details').classList.add('hidden');
+      document.getElementById('modal-puppy-details').classList.remove('flex');
+    }
+
+    // ADMIN MODAL & TAB LOGIC
+    function openAdminModal() {
+      document.getElementById('modal-admin').classList.remove('hidden');
+      document.getElementById('modal-admin').classList.add('flex');
+      
+      if (isAdminLoggedIn) {
+        document.getElementById('admin-login-view').classList.add('hidden');
+        document.getElementById('admin-dashboard-view').classList.remove('hidden');
+        renderAdminDogsTable();
+      } else {
+        document.getElementById('admin-login-view').classList.remove('hidden');
+        document.getElementById('admin-dashboard-view').classList.add('hidden');
+      }
+    }
+
+    function closeAdminModal() {
+      document.getElementById('modal-admin').classList.add('hidden');
+      document.getElementById('modal-admin').classList.remove('flex');
+    }
+
+    function handleLogin(e) {
+      e.preventDefault();
+      const u = document.getElementById('login-user').value;
+      const p = document.getElementById('login-pass').value;
+
+      if (u === 'admin' && p === 'admin123') {
+        isAdminLoggedIn = true;
+        document.getElementById('admin-login-view').classList.add('hidden');
+        document.getElementById('admin-dashboard-view').classList.remove('hidden');
+        renderAdminDogsTable();
+      } else {
+        alert('Credenciais incorretas! Tente admin / admin123');
+      }
+    }
+
+    function logoutAdmin() {
+      isAdminLoggedIn = false;
+      document.getElementById('admin-dashboard-view').classList.add('hidden');
+      document.getElementById('admin-login-view').classList.remove('hidden');
+    }
+
+    function switchAdminTab(tabName) {
+      const tabs = ['dogs', 'vendas', 'relatorio', 'supabase'];
+      tabs.forEach(t => {
+        document.getElementById(`admin-tab-${t}`).classList.add('hidden');
+        const btn = document.getElementById(`tab-btn-${t}`);
+        btn.classList.remove('bg-brand-800', 'text-white');
+        btn.classList.add('bg-brand-200', 'text-brand-800');
+      });
+
+      document.getElementById(`admin-tab-${tabName}`).classList.remove('hidden');
+      const activeBtn = document.getElementById(`tab-btn-${tabName}`);
+      activeBtn.classList.add('bg-brand-800', 'text-white');
+      activeBtn.classList.remove('bg-brand-200', 'text-brand-800');
+
+      if (tabName === 'vendas') populateVendaDogsDropdown();
+      if (tabName === 'relatorio') renderAdminVendasTable();
+    }
+
+    // RENDER ADMIN DOGS TABLE
+    function renderAdminDogsTable() {
+      const tbody = document.getElementById('admin-dogs-table-body');
+      tbody.innerHTML = dogsData.map(dog => `
+        <tr class="hover:bg-brand-50">
+          <td class="p-3">
+            <img src="${dog.foto}" alt="" class="w-10 h-10 rounded-lg object-cover border border-brand-200">
+          </td>
+          <td class="p-3 font-bold text-brand-900">
+            ${dog.nome}
+            <span class="block text-[10px] font-normal text-brand-600">${dog.raca}</span>
+          </td>
+          <td class="p-3">${dog.idade_meses}m</td>
+          <td class="p-3">
+            Pelo ${dog.pelo}
+            <span class="block text-[10px] text-brand-600">${dog.cor_pelagem}</span>
+          </td>
+          <td class="p-3">${dog.pedigree === 'sim' ? 'Sim' : 'Não'}</td>
+          <td class="p-3">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold ${
+              dog.disponibilidade === 'disponivel' ? 'bg-emerald-100 text-emerald-800' :
+              dog.disponibilidade === 'data_especifica' ? 'bg-amber-100 text-amber-800' : 'bg-gray-200 text-gray-800'
+            }">
+              ${dog.disponibilidade}
+            </span>
+          </td>
+          <td class="p-3 text-right space-x-1">
+            <button onclick="editDog('${dog.id}')" class="p-1.5 bg-brand-100 hover:bg-brand-200 text-brand-800 rounded">
+              <i class="fa-solid fa-pen"></i>
+            </button>
+            <button onclick="deleteDog('${dog.id}')" class="p-1.5 bg-red-100 hover:bg-red-200 text-red-800 rounded">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    // SAVE / EDIT / DELETE DOG
+    function openDogFormModal(dog = null) {
+      document.getElementById('modal-dog-form').classList.remove('hidden');
+      document.getElementById('modal-dog-form').classList.add('flex');
+
+      if (dog) {
+        document.getElementById('modal-dog-form-title').innerText = 'Alterar Filhote';
+        document.getElementById('dog-form-id').value = dog.id;
+        document.getElementById('dog-nome').value = dog.nome;
+        document.getElementById('dog-raca').value = dog.raca;
+        document.getElementById('dog-idade').value = dog.idade_meses;
+        document.getElementById('dog-pelo').value = dog.pelo;
+        document.getElementById('dog-pedigree').value = dog.pedigree;
+        document.getElementById('dog-cor-pelagem').value = dog.cor_pelagem;
+        document.getElementById('dog-cor-olhos').value = dog.cor_olhos;
+        document.getElementById('dog-disponibilidade').value = dog.disponibilidade;
+        document.getElementById('dog-data-especifica').value = dog.data_especifica || '';
+        document.getElementById('dog-foto').value = dog.foto;
+        document.getElementById('dog-detalhes').value = dog.detalhes || '';
+      } else {
+        document.getElementById('modal-dog-form-title').innerText = 'Cadastrar Novo Filhote';
+        document.getElementById('dog-form-id').value = '';
+        document.getElementById('dog-nome').value = '';
+        document.getElementById('dog-idade').value = '2';
+        document.getElementById('dog-cor-pelagem').value = '';
+        document.getElementById('dog-cor-olhos').value = '';
+        document.getElementById('dog-foto').value = '';
+        document.getElementById('dog-detalhes').value = '';
+      }
+      toggleDataEspecificaField();
+    }
+
+    function closeDogFormModal() {
+      document.getElementById('modal-dog-form').classList.add('hidden');
+      document.getElementById('modal-dog-form').classList.remove('flex');
+    }
+
+    function toggleDataEspecificaField() {
+      const disp = document.getElementById('dog-disponibilidade').value;
+      const wrapper = document.getElementById('wrapper-data-especifica');
+      if (disp === 'data_especifica') {
+        wrapper.classList.remove('hidden');
+      } else {
+        wrapper.classList.add('hidden');
+      }
+    }
+
+    function handleSaveDog(e) {
+      e.preventDefault();
+      const id = document.getElementById('dog-form-id').value;
+      const newDog = {
+        id: id || Date.now().toString(),
+        nome: document.getElementById('dog-nome').value,
+        raca: document.getElementById('dog-raca').value,
+        idade_meses: parseInt(document.getElementById('dog-idade').value),
+        pelo: document.getElementById('dog-pelo').value,
+        pedigree: document.getElementById('dog-pedigree').value,
+        cor_pelagem: document.getElementById('dog-cor-pelagem').value,
+        cor_olhos: document.getElementById('dog-cor-olhos').value,
+        disponibilidade: document.getElementById('dog-disponibilidade').value,
+        data_especifica: document.getElementById('dog-data-especifica').value,
+        foto: document.getElementById('dog-foto').value,
+        detalhes: document.getElementById('dog-detalhes').value,
+        created_at: new Date().toISOString()
+      };
+
+      if (id) {
+        const index = dogsData.findIndex(d => d.id === id);
+        if (index !== -1) dogsData[index] = newDog;
+      } else {
+        dogsData.unshift(newDog);
+      }
+
+      saveDogsState();
+      closeDogFormModal();
+    }
+
+    function editDog(id) {
+      const dog = dogsData.find(d => d.id === id);
+      if (dog) openDogFormModal(dog);
+    }
+
+    function deleteDog(id) {
+      if (confirm('Tem certeza que deseja excluir este cadastrado?')) {
+        dogsData = dogsData.filter(d => d.id !== id);
+        saveDogsState();
+      }
+    }
+
+    // REGISTRAR VENDA
+    function populateVendaDogsDropdown() {
+      const select = document.getElementById('venda-dog-id');
+      const disponiveis = dogsData.filter(d => d.disponibilidade !== 'vendido');
+      
+      select.innerHTML = '<option value="">-- Selecione o Filhote --</option>' + 
+        disponiveis.map(d => `
+          <option value="${d.id}">${d.nome} - ${d.raca} | Pelo: ${d.pelo} | Cor: ${d.cor_pelagem} | Olhos: ${d.cor_olhos}</option>
+        `).join('');
+    }
+
+    function handleRegistrarVenda(e) {
+      e.preventDefault();
+      const dogId = document.getElementById('venda-dog-id').value;
+      const dog = dogsData.find(d => d.id === dogId);
+
+      if (!dog) {
+        alert('Selecione um filhote válido.');
+        return;
+      }
+
+      const venda = {
+        id: 'v_' + Date.now(),
+        dog_id: dog.id,
+        dog_nome: dog.nome,
+        cliente_cpf: document.getElementById('venda-cliente-cpf').value,
+        cliente_nome: document.getElementById('venda-cliente-nome').value,
+        cliente_tel: document.getElementById('venda-cliente-tel').value,
+        cliente_endereco: document.getElementById('venda-cliente-endereco').value,
+        valor: parseFloat(document.getElementById('venda-valor').value),
+        tipo_entrega: document.getElementById('venda-tipo-entrega').value,
+        data_venda: new Date().toISOString()
+      };
+
+      // Atualiza status do dog para vendido e insere data de venda
+      dog.disponibilidade = 'vendido';
+      dog.data_venda = new Date().toISOString().split('T')[0];
+
+      vendasData.unshift(venda);
+
+      saveDogsState();
+      saveVendasState();
+
+      alert(`Venda do filhote ${dog.nome} registrada com sucesso!`);
+      switchAdminTab('relatorio');
+    }
+
+    function renderAdminVendasTable() {
+      const tbody = document.getElementById('admin-vendas-table-body');
+      if (vendasData.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" class="p-4 text-center text-brand-600">Nenhuma venda registrada ainda.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = vendasData.map(v => `
+        <tr class="hover:bg-brand-50">
+          <td class="p-3">${formatDate(v.data_venda)}</td>
+          <td class="p-3 font-bold text-brand-900">${v.dog_nome}</td>
+          <td class="p-3">
+            <span class="font-semibold">${v.cliente_nome}</span>
+            <span class="block text-[10px] text-brand-600">CPF: ${v.cliente_cpf}</span>
+          </td>
+          <td class="p-3">${v.cliente_tel}</td>
+          <td class="p-3">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-brand-100 text-brand-800">
+              ${v.tipo_entrega}
+            </span>
+          </td>
+          <td class="p-3 font-bold text-emerald-700">R$ ${v.valor.toFixed(2)}</td>
+        </tr>
+      `).join('');
+    }
+
+    // SUPABASE CONFIG SAVER
+    function saveSupabaseConfig() {
+      const url = document.getElementById('supabase-url').value;
+      const key = document.getElementById('supabase-key').value;
+
+      localStorage.setItem('vt_supabase_url', url);
+      localStorage.setItem('vt_supabase_key', key);
+
+      alert('Configurações salvas no navegador com sucesso!');
+    }
+
+    // UTILS
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      const [year, month, day] = dateStr.split('T')[0].split('-');
+      return `${day}/${month}/${year}`;
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // INITIALIZE APP
+    window.onload = function() {
+      initDatabase();
+      renderPuppies();
+    }
+  </script>
+</body>
+</html>
