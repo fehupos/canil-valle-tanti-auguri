@@ -45,11 +45,11 @@
       scroll-behavior: smooth;
     }
     section[id] {
-      scroll-margin-top: 313px;
+      scroll-margin-top: 294px;
     }
     @media (min-width: 640px) {
       section[id] {
-        scroll-margin-top: 201px;
+        scroll-margin-top: 138px;
       }
     }
     body {
@@ -88,7 +88,7 @@
   <header class="fixed top-0 left-0 w-full z-40 bg-brand-800 border-b border-brand-700 transition-all duration-300">
     <div class="flex items-center justify-center border-b border-brand-200 bg-white py-2">
       <a href="#" class="group">
-        <img src="https://imghosting.in/host/6z9ray" alt="Logomarca Oficial Canil Valle Tanti Auguri" class="block h-60 w-60 object-contain mix-blend-multiply opacity-90 sm:h-32 sm:w-72">
+        <img src="https://imghosting.in/host/6z9ray" alt="Logomarca Oficial Canil Valle Tanti Auguri" class="block h-[220px] w-[220px] object-contain mix-blend-multiply opacity-90 sm:h-16 sm:w-36">
       </a>
     </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center">
@@ -99,11 +99,11 @@
       <!-- Desktop Nav Links -->
       <nav class="hidden lg:flex items-center gap-5 xl:gap-8 text-xs xl:text-sm font-semibold text-white col-start-2 row-start-1 justify-self-center">
         <a href="#inicio" class="hover:text-brand-200 transition-colors">Início</a>
-        <a href="#sobre" class="hover:text-brand-200 transition-colors">Sobre Nós</a>
         <a href="#filhotes" class="hover:text-brand-200 transition-colors flex items-center gap-1">
           <span>Filhotes</span>
           <span id="badge-filhotes-count" class="bg-brand-600 text-white text-[10px] px-1.5 py-0.5 rounded-full">0</span>
         </a>
+        <a href="#sobre" class="hover:text-brand-200 transition-colors">Sobre Nós</a>
         <a href="#nova-sede" class="hover:text-brand-200 transition-colors">Nova Sede</a>
         <a href="#contato" class="hover:text-brand-200 transition-colors">Contato</a>
       </nav>
@@ -113,7 +113,7 @@
         <button onclick="openAdminModal()" class="px-3.5 py-2 text-xs font-semibold text-white border border-white/40 rounded-lg hover:bg-white/10 transition-colors flex items-center gap-2">
           <i class="fa-solid fa-lock text-white"></i> Painel Admin
         </button>
-        <a href="https://wa.me/5511984755645?text=Olá!+Vim+pelo+site+e+gostaria+de+falar+sobre+os+Chihuahuas+Valle+Tanti+Auguri" target="_blank" class="px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg text-xs font-bold transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+        <a href="https://wa.me/5511984755645?text=Olá!+Vim+pelo+site+e+gostaria+de+falar+sobre+os+Chihuahuas+Valle+Tanti+Auguri" target="_blank" class="px-4 py-2 bg-[#25D366] hover:bg-[#1FAE55] text-white rounded-lg text-xs font-bold transition-all shadow-md hover:shadow-lg flex items-center gap-2">
           <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
         </a>
       </div>
@@ -127,44 +127,44 @@
     <!-- Mobile Dropdown -->
     <div id="mobile-menu" class="hidden lg:hidden bg-brand-800 border-b border-brand-700 px-6 py-4 space-y-3">
       <a href="#inicio" onclick="toggleMobileMenu()" class="block text-white font-medium hover:text-brand-200">Início</a>
-      <a href="#sobre" onclick="toggleMobileMenu()" class="block text-white font-medium hover:text-brand-200">Sobre Nós</a>
       <a href="#filhotes" onclick="toggleMobileMenu()" class="block text-white font-medium hover:text-brand-200">Filhotes Disponíveis</a>
+      <a href="#sobre" onclick="toggleMobileMenu()" class="block text-white font-medium hover:text-brand-200">Sobre Nós</a>
       <a href="#nova-sede" onclick="toggleMobileMenu()" class="block text-white font-medium hover:text-brand-200">Nova Sede</a>
       <a href="#contato" onclick="toggleMobileMenu()" class="block text-white font-medium hover:text-brand-200">Contato</a>
       <div class="pt-3 border-t border-white/20 flex flex-col gap-2">
         <button onclick="toggleMobileMenu(); openAdminModal()" class="w-full text-center px-4 py-2 text-xs font-semibold text-white border border-white/40 rounded-lg hover:bg-white/10">
           <i class="fa-solid fa-lock text-white"></i> Painel Administrativo
         </button>
-        <a href="https://wa.me/5511984755645?text=Olá!+Vim+pelo+site+e+gostaria+de+falar+sobre+os+Chihuahuas+Valle+Tanti+Auguri" target="_blank" class="w-full text-center px-4 py-2 bg-emerald-700 text-white rounded-lg text-xs font-bold flex items-center justify-center gap-2">
+        <a href="https://wa.me/5511984755645?text=Olá!+Vim+pelo+site+e+gostaria+de+falar+sobre+os+Chihuahuas+Valle+Tanti+Auguri" target="_blank" class="w-full text-center px-4 py-2 bg-[#25D366] text-white rounded-lg text-xs font-bold flex items-center justify-center gap-2">
           <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
         </a>
       </div>
     </div>
   </header>
 
-  <main class="pt-[313px] sm:pt-[201px]">
+  <main class="pt-[294px] sm:pt-[138px]">
     <!-- HERO SECTION -->
     <section id="inicio" class="relative overflow-hidden">
-      <div class="relative isolate flex min-h-[760px] items-center overflow-hidden bg-brand-900 sm:min-h-[720px] lg:min-h-[680px]">
+      <div class="relative isolate flex min-h-[640px] items-center overflow-hidden bg-brand-900 sm:min-h-[620px] lg:min-h-[600px]">
         <img src="https://imghosting.in/host/1u6pie?auto=format&fit=crop&w=2000&q=85" alt="Chihuahua Canil Valle Tanti Auguri" class="absolute inset-0 h-full w-full object-cover object-center">
         <div class="absolute inset-0 bg-gradient-to-b from-brand-900/55 via-brand-900/60 to-brand-900/90"></div>
 
-        <div class="relative z-10 mx-auto w-full max-w-5xl px-4 py-12 text-center text-white sm:px-6 lg:px-8 lg:py-16">
+        <div class="relative z-10 mx-auto w-full max-w-5xl px-4 py-8 text-center text-white sm:px-6 lg:px-8 lg:py-10">
         <h1 class="mt-5 font-serif text-3xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
           A excelência e pureza da raça <span class="text-brand-300 italic">Chihuahua</span>.
         </h1>
         <p class="mx-auto mt-5 max-w-3xl text-base font-normal leading-relaxed text-white sm:text-lg">
           Criando amor em pequenas doses em Guarulhos - SP. Nossos filhotes são criados com acompanhamento veterinário diário, estrutura premium higienizada e entregues com total segurança para todo o Brasil.
         </p>
-        <p class="mt-4 font-serif text-lg font-bold text-white">Chihuahua de Linhagem Exclusiva</p>
+        <p class="mt-4 font-serif text-lg font-bold text-white">Chihuahua de Linhagem Exclusiva Russa Polonesa e Tailandesas</p>
         <p class="text-xs text-brand-200">Temperamento dócil, pedigree garantido e saúde impecável.</p>
 
-        <div class="flex flex-wrap justify-center gap-4 pt-6">
-          <a href="https://wa.me/5511984755645?text=Olá!+Vim+pelo+site+e+gostaria+de+falar+sobre+os+Chihuahuas+Valle+Tanti+Auguri" target="_blank" class="flex items-center gap-3 rounded-xl bg-emerald-700 px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all hover:bg-emerald-800 hover:shadow-xl">
+        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-6">
+          <a href="https://wa.me/5511984755645?text=Olá!+Vim+pelo+site+e+gostaria+de+falar+sobre+os+Chihuahuas+Valle+Tanti+Auguri" target="_blank" class="flex w-full sm:w-auto items-center justify-center gap-3 rounded-xl bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all hover:bg-[#1FAE55] hover:shadow-xl">
             <i class="fa-brands fa-whatsapp text-lg"></i>
             <span>Chamar no WhatsApp</span>
           </a>
-          <a href="#filhotes" class="flex items-center gap-2 rounded-xl border border-white/50 bg-brand-800/90 px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-brand-900 hover:shadow-lg">
+          <a href="#filhotes" class="flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border border-white/50 bg-brand-800/90 px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-brand-900 hover:shadow-lg">
             <i class="fa-solid fa-dog"></i>
             <span>Ver Filhotes Disponíveis</span>
           </a>
@@ -174,93 +174,37 @@
       </div>
 
       <div class="bg-brand-50">
-        <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 gap-4 text-left sm:grid-cols-3">
-            <div class="flex items-center justify-center gap-3 sm:justify-start">
-              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-200/80 text-brand-800">
+        <div class="mx-auto w-fit max-w-full px-4 py-8 sm:px-6 lg:px-8">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+            <div class="grid grid-cols-[40px_auto] items-center gap-3">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-200/80 text-brand-800">
                 <i class="fa-solid fa-plane-departure text-lg"></i>
               </div>
-              <div>
+              <div class="min-w-0">
                 <p class="text-xs font-bold text-brand-900">Envio Aéreo</p>
                 <p class="text-[11px] text-brand-600">Todo o Brasil</p>
               </div>
             </div>
-            <div class="flex items-center justify-center gap-3 sm:justify-start">
-              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-200/80 text-brand-800">
+            <div class="grid grid-cols-[40px_auto] items-center gap-3">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-200/80 text-brand-800">
                 <i class="fa-solid fa-car text-lg"></i>
               </div>
-              <div>
+              <div class="min-w-0">
                 <p class="text-xs font-bold text-brand-900">Entrega Presencial</p>
                 <p class="text-[11px] text-brand-600">Grande SP</p>
               </div>
             </div>
-            <div class="flex items-center justify-center gap-3 sm:justify-start">
-              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-200/80 text-brand-800">
+            <div class="grid grid-cols-[40px_auto] items-center gap-3">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-200/80 text-brand-800">
                 <i class="fa-solid fa-user-md text-lg"></i>
               </div>
-              <div>
+              <div class="min-w-0">
                 <p class="text-xs font-bold text-brand-900">Veterinários</p>
                 <p class="text-[11px] text-brand-600">Acompanhamento</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- DIFFERENTIALS / SOBRE -->
-    <section id="sobre" class="py-16 bg-white border-y border-brand-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-2">Por que escolher o Valle Tanti Auguri</h2>
-          <p class="font-serif text-2xl sm:text-4xl font-bold text-brand-900">Cuidados amorosos e rigor técnico em cada detalhe</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
-          <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:border-brand-400 transition-all hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl bg-brand-800 text-brand-100 flex items-center justify-center text-xl mb-4 shadow-sm">
-              <i class="fa-solid fa-heart-pulse"></i>
-            </div>
-            <h3 class="font-serif text-lg font-bold text-brand-900 mb-2">Acompanhamento Médico</h3>
-            <p class="text-xs text-brand-700 leading-relaxed">
-              Equipe de veterinários responsáveis dedicados ao bem-estar, vacinação em dia e controle rigoroso de vermifugação.
-            </p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:border-brand-400 transition-all hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl bg-brand-800 text-brand-100 flex items-center justify-center text-xl mb-4 shadow-sm">
-              <i class="fa-solid fa-sparkles"></i>
-            </div>
-            <h3 class="font-serif text-lg font-bold text-brand-900 mb-2">Higienização Diária</h3>
-            <p class="text-xs text-brand-700 leading-relaxed">
-              Estrutura confortável desinfetada diariamente com produtos específicos e seguros para a proteção dos cães.
-            </p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:border-brand-400 transition-all hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl bg-brand-800 text-brand-100 flex items-center justify-center text-xl mb-4 shadow-sm">
-              <i class="fa-solid fa-truck-fast"></i>
-            </div>
-            <h3 class="font-serif text-lg font-bold text-brand-900 mb-2">Logística Segura</h3>
-            <p class="text-xs text-brand-700 leading-relaxed">
-              Entregas em mãos na Grande São Paulo e envio aéreo especializado para todos os aeroportos do Brasil.
-            </p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:border-brand-400 transition-all hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl bg-brand-800 text-brand-100 flex items-center justify-center text-xl mb-4 shadow-sm">
-              <i class="fa-solid fa-ribbon"></i>
-            </div>
-            <h3 class="font-serif text-lg font-bold text-brand-900 mb-2">10+ Anos de História</h3>
-            <p class="text-xs text-brand-700 leading-relaxed">
-              Tradição em Guarulhos-SP formando famílias mais felizes com filhotes de temperamento equilibrado e dentro do padrão.
-            </p>
-          </div>
-
-        </div>
-
       </div>
     </section>
 
@@ -297,6 +241,55 @@
           <!-- Dinamicamente renderizado via JS -->
         </div>
 
+      </div>
+    </section>
+
+    <!-- DIFFERENTIALS / SOBRE -->
+    <section id="sobre" class="py-16 bg-white border-y border-brand-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-2">Por que escolher o Valle Tanti Auguri</h2>
+          <p class="font-serif text-2xl sm:text-4xl font-bold text-brand-900">Cuidados amorosos e rigor técnico em cada detalhe</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:border-brand-400 transition-all hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-brand-800 text-brand-100 flex items-center justify-center text-xl mb-4 shadow-sm">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-brand-900 mb-2">Acompanhamento Médico</h3>
+            <p class="text-xs text-brand-700 leading-relaxed">Equipe de veterinários responsáveis dedicados ao bem-estar, vacinação em dia e controle rigoroso de vermifugação.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:border-brand-400 transition-all hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-brand-800 text-brand-100 flex items-center justify-center text-xl mb-4 shadow-sm">
+              <i class="fa-solid fa-broom"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-brand-900 mb-2">Higienização Diária</h3>
+            <p class="text-xs text-brand-700 leading-relaxed">Estrutura confortável desinfetada diariamente com produtos específicos e seguros para a proteção dos cães.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:border-brand-400 transition-all hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-brand-800 text-brand-100 flex items-center justify-center text-xl mb-4 shadow-sm">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-brand-900 mb-2">Logística Segura</h3>
+            <p class="text-xs text-brand-700 leading-relaxed">Entregas em mãos na Grande São Paulo e envio aéreo especializado para todos os aeroportos do Brasil.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:border-brand-400 transition-all hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-brand-800 text-brand-100 flex items-center justify-center text-xl mb-4 shadow-sm">
+              <i class="fa-solid fa-ribbon"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-brand-900 mb-2">10+ Anos de História</h3>
+            <p class="text-xs text-brand-700 leading-relaxed">Tradição em Guarulhos-SP formando famílias mais felizes com filhotes de temperamento equilibrado e dentro do padrão.</p>
+          </div>
+        </div>
+
+        <div class="mt-12 border-t border-brand-200 pt-8 text-center">
+          <p class="mx-auto max-w-2xl font-serif text-lg font-bold text-brand-900 mb-2">Conheça nosso Instagram e veja as pessoas e famílias que já passaram pelo Valle Tanti Auguri.</p>
+          <a href="https://www.instagram.com/valletantiaugurichihuahua/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-brand-800 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-900">
+            <i class="fa-brands fa-instagram text-base"></i>
+            Conhecer nosso Instagram
+          </a>
+        </div>
       </div>
     </section>
 
@@ -352,12 +345,16 @@
           <div class="space-y-2 text-xs text-brand-800">
             <p><i class="fa-solid fa-location-dot text-brand-600 w-5"></i> Sede: Guarulhos - SP</p>
             <p><i class="fa-brands fa-whatsapp text-emerald-600 w-5"></i> +55 (11) 98475-5645</p>
+            <p><i class="fa-brands fa-instagram text-[#C13584] w-5"></i> <a href="https://www.instagram.com/valletantiaugurichihuahua/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600">@valletantiaugurichihuahua</a></p>
             <p><i class="fa-solid fa-truck text-brand-600 w-5"></i> Entregas em SP e Todo o Brasil</p>
           </div>
 
           <div class="flex justify-center md:justify-end gap-3">
-            <a href="https://wa.me/5511984755645?text=Olá!+Vim+pelo+site+e+gostaria+de+falar+sobre+os+Chihuahuas+Valle+Tanti+Auguri" target="_blank" class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-700 transition-colors">
+            <a href="https://wa.me/5511984755645?text=Olá!+Vim+pelo+site+e+gostaria+de+falar+sobre+os+Chihuahuas+Valle+Tanti+Auguri" target="_blank" class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:bg-[#1FAE55] transition-colors">
               <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+            <a href="https://www.instagram.com/valletantiaugurichihuahua/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#C13584] text-white flex items-center justify-center hover:bg-[#A02D6E] transition-colors" title="Instagram @valletantiaugurichihuahua" aria-label="Instagram Valle Tanti Auguri">
+              <i class="fa-brands fa-instagram text-lg"></i>
             </a>
             <button onclick="openAdminModal()" class="w-10 h-10 rounded-full bg-brand-800 text-brand-100 flex items-center justify-center hover:bg-brand-900 transition-colors" title="Acesso do Administrador">
               <i class="fa-solid fa-user-gear"></i>
@@ -376,7 +373,7 @@
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/5511984755645?text=Olá!+Vim+pelo+site+e+gostaria+de+falar+sobre+os+Chihuahuas+Valle+Tanti+Auguri" target="_blank" class="fixed bottom-6 right-6 z-30 bg-emerald-600 text-white p-4 rounded-full shadow-2xl hover:bg-emerald-700 transition-all hover:scale-110 flex items-center justify-center group" title="Falar no WhatsApp">
+  <a href="https://wa.me/5511984755645?text=Olá!+Vim+pelo+site+e+gostaria+de+falar+sobre+os+Chihuahuas+Valle+Tanti+Auguri" target="_blank" class="fixed bottom-6 right-6 z-30 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#1FAE55] transition-all hover:scale-110 flex items-center justify-center group" title="Falar no WhatsApp">
     <i class="fa-brands fa-whatsapp text-3xl"></i>
     <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-xs font-bold pl-0 group-hover:pl-2">
       Falar no WhatsApp
@@ -416,27 +413,24 @@
         <div id="admin-login-view" class="max-w-md mx-auto py-8">
           <div class="bg-white p-8 rounded-2xl border border-brand-200 shadow-md">
             <div class="text-center mb-6">
-              <div class="w-16 h-16 rounded-full bg-brand-100 text-brand-800 flex items-center justify-center mx-auto text-2xl font-serif font-bold mb-2">
-                VT
-              </div>
               <h4 class="font-serif font-bold text-xl text-brand-900">Acesso Restrito</h4>
               <p class="text-xs text-brand-600">Entre com suas credenciais de administrador</p>
             </div>
 
             <form onsubmit="handleLogin(event)" class="space-y-4">
               <div>
-                <label class="block text-xs font-bold text-brand-800 mb-1">Usuário</label>
-                <input type="text" id="login-user" required value="admin" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs focus:ring-2 focus:ring-brand-600">
+                <label class="block text-xs font-bold text-brand-800 mb-1">E-mail</label>
+                <input type="email" id="login-email" required autocomplete="username" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs focus:ring-2 focus:ring-brand-600">
               </div>
               <div>
                 <label class="block text-xs font-bold text-brand-800 mb-1">Senha</label>
-                <input type="password" id="login-pass" required value="admin123" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs focus:ring-2 focus:ring-brand-600">
+                <input type="password" id="login-pass" required autocomplete="current-password" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs focus:ring-2 focus:ring-brand-600">
               </div>
               <button type="submit" class="w-full py-2.5 bg-brand-800 hover:bg-brand-900 text-white text-xs font-bold rounded-lg shadow transition-colors">
                 Entrar no Painel
               </button>
             </form>
-            <p class="text-[10px] text-center text-brand-500 mt-4">Dica para teste: Usuário: <span class="font-mono">admin</span> | Senha: <span class="font-mono">admin123</span></p>
+            <p id="admin-login-error" role="alert" class="hidden text-xs text-red-700 mt-4"></p>
           </div>
         </div>
 
@@ -482,8 +476,7 @@
                     <th class="p-3">Foto</th>
                     <th class="p-3">Nome</th>
                     <th class="p-3">Sexo</th>
-                    <th class="p-3">Pelo / Cor</th>
-                    <th class="p-3">Pedigree</th>
+                    <th class="p-3">Pelo</th>
                     <th class="p-3">Preço</th>
                     <th class="p-3">Status</th>
                     <th class="p-3 text-right">Ações</th>
@@ -621,10 +614,10 @@
             <input type="text" id="dog-cor-pelagem" placeholder="Ex: Creme, Chocolate e Tan" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
           </div>
           <div>
-            <label class="block text-xs font-bold text-brand-800 mb-1">Pedigree CBKC</label>
+            <label class="block text-xs font-bold text-brand-800 mb-1">Pedigree</label>
             <select id="dog-pedigree" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
-              <option value="false">Não</option>
-              <option value="true">Sim</option>
+              <option value="nao">Não</option>
+              <option value="sim">Sim</option>
             </select>
           </div>
         </div>
@@ -645,13 +638,13 @@
         </div>
 
         <div>
-          <label class="block text-xs font-bold text-brand-800 mb-1">Descrição</label>
-          <textarea id="dog-detalhes" rows="3" placeholder="Descrição do filhote..." class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs"></textarea>
+          <label class="block text-xs font-bold text-brand-800 mb-1">URL da Foto</label>
+          <input type="url" id="dog-foto" placeholder="https://..." class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
         </div>
 
         <div>
-          <label class="block text-xs font-bold text-brand-800 mb-1">URL da Foto</label>
-          <input type="url" id="dog-foto" placeholder="https://..." class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs">
+          <label class="block text-xs font-bold text-brand-800 mb-1">Descrição</label>
+          <textarea id="dog-detalhes" rows="3" placeholder="Informações adicionais sobre o filhote" class="w-full px-3 py-2 border border-brand-300 rounded-lg text-xs"></textarea>
         </div>
 
         <div class="flex justify-end gap-2 pt-2">
@@ -745,12 +738,15 @@
 
     const DEFAULT_SUPABASE_URL = 'https://lhinolmdpaonyuxbgzbw.supabase.co/rest/v1/';
     const DEFAULT_SUPABASE_KEY = 'sb_publishable_VOxqH2mDGhJBzzN-qGpETg_QNkInRzy';
+    const SUPABASE_SESSION_KEY = 'vt_supabase_session';
 
     // STATE MANAGEMENT
     let dogsData = [];
     let vendasData = [];
     let isAdminLoggedIn = false;
     let isSupabaseConnected = false;
+    let supabaseSession = null;
+    let sessionRefreshPromise = null;
 
     function initSupabaseConfig() {
       const storedUrl = localStorage.getItem('vt_supabase_url');
@@ -778,11 +774,89 @@
       return baseUrl.endsWith('/rest/v1') ? baseUrl : `${baseUrl}/rest/v1`;
     }
 
+    function getSupabaseProjectUrl() {
+      return getSupabaseRestUrl().replace(/\/rest\/v1$/, '');
+    }
+
+    function saveSupabaseSession(session) {
+      supabaseSession = {
+        ...session,
+        user: session.user || supabaseSession?.user,
+        expires_at: session.expires_at || Math.floor(Date.now() / 1000) + (session.expires_in || 3600)
+      };
+      localStorage.setItem(SUPABASE_SESSION_KEY, JSON.stringify(supabaseSession));
+    }
+
+    function clearSupabaseSession() {
+      supabaseSession = null;
+      localStorage.removeItem(SUPABASE_SESSION_KEY);
+    }
+
+    async function supabaseAuthRequest(resource, options = {}) {
+      const key = localStorage.getItem('vt_supabase_key') || DEFAULT_SUPABASE_KEY;
+      const headers = { apikey: key, Accept: 'application/json' };
+      if (options.body) headers['Content-Type'] = 'application/json';
+      if (options.accessToken) headers.Authorization = `Bearer ${options.accessToken}`;
+
+      const response = await fetch(`${getSupabaseProjectUrl()}/auth/v1/${resource}`, {
+        method: options.method || 'POST',
+        headers,
+        body: options.body ? JSON.stringify(options.body) : undefined
+      });
+      const responseText = await response.text();
+      let result = null;
+      try {
+        result = responseText ? JSON.parse(responseText) : null;
+      } catch {
+        result = responseText;
+      }
+
+      if (!response.ok) {
+        const message = typeof result === 'string'
+          ? result
+          : result?.msg || result?.message || result?.error_description || result?.error;
+        throw new Error(message || `Supabase Auth respondeu com status ${response.status}`);
+      }
+
+      return result;
+    }
+
+    async function refreshSupabaseSession() {
+      if (!supabaseSession?.refresh_token) throw new Error('Sessão expirada. Entre novamente.');
+      const refreshedSession = await supabaseAuthRequest('token?grant_type=refresh_token', {
+        body: { refresh_token: supabaseSession.refresh_token }
+      });
+      saveSupabaseSession(refreshedSession);
+      return supabaseSession.access_token;
+    }
+
+    async function getSupabaseAccessToken() {
+      if (!supabaseSession?.access_token) return null;
+      if (Number(supabaseSession.expires_at) > Date.now() / 1000 + 60) {
+        return supabaseSession.access_token;
+      }
+
+      if (!sessionRefreshPromise) {
+        sessionRefreshPromise = refreshSupabaseSession().finally(() => {
+          sessionRefreshPromise = null;
+        });
+      }
+
+      try {
+        return await sessionRefreshPromise;
+      } catch {
+        clearSupabaseSession();
+        isAdminLoggedIn = false;
+        return null;
+      }
+    }
+
     async function supabaseRequest(resource, options = {}) {
       const key = localStorage.getItem('vt_supabase_key') || DEFAULT_SUPABASE_KEY;
+      const accessToken = await getSupabaseAccessToken();
       const headers = {
         apikey: key,
-        Authorization: `Bearer ${key}`,
+        Authorization: `Bearer ${accessToken || key}`,
         Accept: 'application/json'
       };
 
@@ -820,7 +894,7 @@
         genero: row.gender || row.genero || 'macho',
         pelo: row.coat || row.pelo || 'curto',
         cor_pelagem: row.coat_color || row.cor_pelagem || '',
-        pedigree: row.pedigree === true || row.pedigree === 'true' || row.pedigree === 'sim' || row.pedigree === 1,
+        pedigree: row.pedigree === true || row.pedigree === 'sim' || row.pedigree === 'true' ? 'sim' : 'nao',
         detalhes: row.description || row.detalhes || '',
         preco: row.price ?? row.preco ?? null,
         disponibilidade: rawStatus === 'data_especifica' ? 'reservado' : rawStatus,
@@ -852,23 +926,13 @@
         gender: dog.genero,
         coat: dog.pelo,
         coat_color: dog.cor_pelagem || null,
-        pedigree: dog.pedigree === true || dog.pedigree === 'true' || dog.pedigree === 'sim',
+        pedigree: dog.pedigree === 'sim',
         description: dog.detalhes || null,
         price: dog.preco === '' || dog.preco === null ? null : Number(dog.preco),
         status: dog.disponibilidade,
         image: dog.foto || null,
         birth_date: dog.data_nascimento || null
       };
-    }
-
-    function escapeHtml(value) {
-      return String(value ?? '').replace(/[&<>"']/g, character => ({
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#39;'
-      })[character]);
     }
 
     // LOCAL STORAGE FALLBACK
@@ -893,20 +957,21 @@
     async function loadSupabaseData() {
       setSupabaseStatus('Conectando ao Supabase...');
       try {
-        const [puppyRows, saleRows] = await Promise.all([
-          supabaseRequest('puppies?select=*&order=created_at.desc'),
-          supabaseRequest('sales?select=*,puppies(name)&order=sale_date.desc')
-        ]);
-
+        const puppyRows = await supabaseRequest('puppies?select=*&order=created_at.desc');
         dogsData = puppyRows.map(normalizePuppy);
-        vendasData = saleRows.map(normalizeSale);
-        vendasData.forEach(sale => {
-          const puppy = dogsData.find(dog => dog.id === sale.dog_id);
-          if (puppy && sale.data_venda) puppy.data_venda = sale.data_venda;
-        });
+        if (isAdminLoggedIn) {
+          const saleRows = await supabaseRequest('sales?select=*,puppies(name)&order=sale_date.desc');
+          vendasData = saleRows.map(normalizeSale);
+          vendasData.forEach(sale => {
+            const puppy = dogsData.find(dog => dog.id === sale.dog_id);
+            if (puppy && sale.data_venda) puppy.data_venda = sale.data_venda;
+          });
+        } else {
+          vendasData = [];
+        }
         isSupabaseConnected = true;
         localStorage.setItem('vt_dogs', JSON.stringify(dogsData));
-        localStorage.setItem('vt_vendas', JSON.stringify(vendasData));
+        if (isAdminLoggedIn) localStorage.setItem('vt_vendas', JSON.stringify(vendasData));
         setSupabaseStatus('Conectado ao Supabase.', true);
       } catch (error) {
         isSupabaseConnected = false;
@@ -989,21 +1054,23 @@
               <div>
                 <div class="flex items-center justify-between mb-1">
                   <h3 class="font-serif font-bold text-lg text-brand-900">${dog.nome}</h3>
-                  <span class="text-[10px] font-bold text-brand-700 bg-brand-100 px-2 py-0.5 rounded">${dog.genero === 'femea' ? 'Fêmea' : 'Macho'}</span>
+                  <div class="flex items-center gap-2">
+                    <span class="text-[10px] font-bold text-brand-700 bg-brand-100 px-2 py-0.5 rounded">${dog.genero === 'femea' ? 'Fêmea' : 'Macho'}</span>
+                    ${dog.pedigree === 'sim' ? '<span class="text-[10px] font-bold text-brand-700 bg-brand-100 px-2 py-0.5 rounded">Pedigree CBKC</span>' : ''}
+                  </div>
                 </div>
                 <p class="text-xs text-brand-600 font-semibold mb-3">Chihuahua</p>
                 <div class="grid grid-cols-2 gap-2 text-[11px] bg-brand-50 p-2.5 rounded-lg border border-brand-100">
-                  <div><span class="text-brand-500 font-medium">Pelo:</span> <strong class="text-brand-800 capitalize">${escapeHtml(dog.pelo)}</strong></div>
-                  <div><span class="text-brand-500 font-medium">Cor:</span> <strong class="text-brand-800">${escapeHtml(dog.cor_pelagem || 'Não informada')}</strong></div>
-                  <div><span class="text-brand-500 font-medium">Preço:</span> <strong class="text-brand-800">${formatCurrency(dog.preco)}</strong></div>
+                  <div><span class="text-brand-500 font-medium">Pelo:</span> <strong class="text-brand-800 capitalize">${dog.pelo}</strong></div>
+                  <div><span class="text-brand-500 font-medium">Cor:</span> <strong class="text-brand-800">${dog.cor_pelagem || 'Não informada'}</strong></div>
+                  <div class="col-span-2"><span class="text-brand-500 font-medium">Preço:</span> <strong class="text-brand-800">${formatCurrency(dog.preco)}</strong></div>
+                  ${dog.detalhes ? `<div class="col-span-2"><span class="text-brand-500 font-medium">Descrição:</span> <span class="text-brand-800">${dog.detalhes}</span></div>` : ''}
                 </div>
-                ${dog.pedigree ? '<span class="mt-3 inline-block text-[10px] font-bold text-brand-700 bg-brand-100 px-2 py-1 rounded">Pedigree CBKC</span>' : ''}
-                ${dog.detalhes ? `<p class="mt-3 text-xs leading-relaxed text-brand-700">${escapeHtml(dog.detalhes)}</p>` : ''}
               </div>
 
               <div class="pt-2 flex gap-2">
-                <button onclick="openPuppyModal('${dog.id}')" class="flex-1 py-2 bg-brand-100 hover:bg-brand-200 text-brand-900 text-xs font-bold rounded-lg transition-colors">Ver Detalhes</button>
-                <a href="https://wa.me/5511984755645?text=${msgWhatsapp}" target="_blank" class="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-1" title="Tenho Interesse">
+                <button onclick="openPuppyModal('${dog.id}')" class="flex-1 py-2 bg-brand-800 hover:bg-brand-900 text-white text-xs font-bold rounded-lg transition-colors">Ver Detalhes</button>
+                <a href="https://wa.me/5511984755645?text=${msgWhatsapp}" target="_blank" class="px-3.5 py-2 bg-[#25D366] hover:bg-[#1FAE55] text-white rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-1" title="Tenho Interesse">
                   <i class="fa-brands fa-whatsapp text-sm"></i>
                 </a>
               </div>
@@ -1032,14 +1099,14 @@
             <div class="space-y-2 text-xs text-brand-800">
               <div class="flex justify-between py-1 border-b border-brand-200"><span class="text-brand-600">Sexo:</span><span class="font-bold">${dog.genero === 'femea' ? 'Fêmea' : 'Macho'}</span></div>
               <div class="flex justify-between py-1 border-b border-brand-200"><span class="text-brand-600">Tipo de Pelo:</span><span class="font-bold capitalize">${dog.pelo}</span></div>
-              <div class="flex justify-between py-1 border-b border-brand-200"><span class="text-brand-600">Cor da Pelagem:</span><span class="font-bold">${escapeHtml(dog.cor_pelagem || 'Não informada')}</span></div>
-              ${dog.pedigree ? '<div class="flex justify-between py-1 border-b border-brand-200"><span class="text-brand-600">Pedigree:</span><span class="font-bold">Pedigree CBKC</span></div>' : ''}
+              <div class="flex justify-between py-1 border-b border-brand-200"><span class="text-brand-600">Cor da Pelagem:</span><span class="font-bold">${dog.cor_pelagem || 'Não informada'}</span></div>
+              <div class="flex justify-between py-1 border-b border-brand-200"><span class="text-brand-600">Pedigree:</span><span class="font-bold">${dog.pedigree === 'sim' ? 'Pedigree CBKC' : 'Não'}</span></div>
               <div class="flex justify-between py-1 border-b border-brand-200"><span class="text-brand-600">Nascimento:</span><span class="font-bold">${dog.data_nascimento ? formatDate(dog.data_nascimento) : 'Não informado'}</span></div>
               <div class="flex justify-between py-1 border-b border-brand-200"><span class="text-brand-600">Preço:</span><span class="font-bold">${formatCurrency(dog.preco)}</span></div>
               <div class="flex justify-between py-1 border-b border-brand-200"><span class="text-brand-600">Status:</span><span class="font-bold">${statusLabel}</span></div>
             </div>
-            ${dog.detalhes ? `<p class="text-xs text-brand-700 bg-brand-50 p-3 rounded-lg border border-brand-200">${escapeHtml(dog.detalhes)}</p>` : ''}
-            <a href="https://wa.me/5511984755645?text=${msgWhatsapp}" target="_blank" class="w-full py-3 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-lg transition-colors">
+            ${dog.detalhes ? `<p class="text-xs text-brand-700 bg-brand-50 p-3 rounded-lg border border-brand-200">${dog.detalhes}</p>` : ''}
+            <a href="https://wa.me/5511984755645?text=${msgWhatsapp}" target="_blank" class="w-full py-3 bg-[#25D366] hover:bg-[#1FAE55] text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-lg transition-colors">
               <i class="fa-brands fa-whatsapp text-lg"></i> Falar com o Criador no WhatsApp
             </a>
           </div>
@@ -1075,23 +1142,83 @@
       document.getElementById('modal-admin').classList.remove('flex');
     }
 
-    function handleLogin(e) {
-      e.preventDefault();
-      const u = document.getElementById('login-user').value;
-      const p = document.getElementById('login-pass').value;
+    async function restoreAdminSession() {
+      const storedSession = localStorage.getItem(SUPABASE_SESSION_KEY);
+      if (!storedSession) return;
 
-      if (u === 'admin' && p === 'admin123') {
+      try {
+        supabaseSession = JSON.parse(storedSession);
+        const accessToken = await getSupabaseAccessToken();
+        if (!accessToken || !supabaseSession?.user?.id) throw new Error('Sessão inválida.');
+
+        const adminRows = await supabaseRequest(
+          `admin_users?select=user_id&user_id=eq.${encodeURIComponent(supabaseSession.user.id)}`
+        );
+        if (!adminRows?.length) throw new Error('Usuário sem permissão administrativa.');
         isAdminLoggedIn = true;
-        document.getElementById('admin-login-view').classList.add('hidden');
-        document.getElementById('admin-dashboard-view').classList.remove('hidden');
-        renderAdminDogsTable();
-      } else {
-        alert('Credenciais incorretas! Tente admin / admin123');
+      } catch {
+        clearSupabaseSession();
+        isAdminLoggedIn = false;
       }
     }
 
-    function logoutAdmin() {
+    async function handleLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value.trim();
+      const password = document.getElementById('login-pass').value;
+      const errorElement = document.getElementById('admin-login-error');
+      errorElement.classList.add('hidden');
+
+      try {
+        const authResult = await supabaseAuthRequest('token?grant_type=password', {
+          body: { email, password }
+        });
+        if (!authResult?.access_token || !authResult.user?.id) {
+          throw new Error('O Supabase não retornou uma sessão válida.');
+        }
+
+        saveSupabaseSession(authResult);
+        const adminRows = await supabaseRequest(
+          `admin_users?select=user_id&user_id=eq.${encodeURIComponent(authResult.user.id)}`
+        );
+        if (!adminRows?.length) {
+          throw new Error('Este usuário não está autorizado como administrador.');
+        }
+
+        isAdminLoggedIn = true;
+        const saleRows = await supabaseRequest('sales?select=*,puppies(name)&order=sale_date.desc');
+        vendasData = saleRows.map(normalizeSale);
+        document.getElementById('login-pass').value = '';
+        document.getElementById('admin-login-view').classList.add('hidden');
+        document.getElementById('admin-dashboard-view').classList.remove('hidden');
+        renderAdminDogsTable();
+        renderAdminVendasTable();
+      } catch (error) {
+        if (supabaseSession?.access_token) {
+          try {
+            await supabaseAuthRequest('logout', { accessToken: supabaseSession.access_token });
+          } catch {
+          }
+        }
+        clearSupabaseSession();
+        isAdminLoggedIn = false;
+        errorElement.textContent = error.message || 'Não foi possível entrar. Confira o e-mail e a senha.';
+        errorElement.classList.remove('hidden');
+      }
+    }
+
+    async function logoutAdmin() {
+      const accessToken = supabaseSession?.access_token;
+      if (accessToken) {
+        try {
+          await supabaseAuthRequest('logout', { accessToken });
+        } catch {
+        }
+      }
+      clearSupabaseSession();
       isAdminLoggedIn = false;
+      vendasData = [];
+      document.getElementById('login-pass').value = '';
       document.getElementById('admin-dashboard-view').classList.add('hidden');
       document.getElementById('admin-login-view').classList.remove('hidden');
     }
@@ -1126,11 +1253,7 @@
             ${dog.nome}
           </td>
           <td class="p-3 capitalize">${dog.genero}</td>
-          <td class="p-3 capitalize">
-            ${escapeHtml(dog.pelo)}
-            <span class="block text-[10px] normal-case text-brand-600">${escapeHtml(dog.cor_pelagem || 'Cor não informada')}</span>
-          </td>
-          <td class="p-3">${dog.pedigree ? 'Pedigree CBKC' : ''}</td>
+          <td class="p-3 capitalize">${dog.pelo}</td>
           <td class="p-3">${formatCurrency(dog.preco)}</td>
           <td class="p-3">
             <span class="px-2 py-0.5 rounded text-[10px] font-bold ${
@@ -1164,7 +1287,7 @@
         document.getElementById('dog-genero').value = dog.genero;
         document.getElementById('dog-pelo').value = dog.pelo;
         document.getElementById('dog-cor-pelagem').value = dog.cor_pelagem || '';
-        document.getElementById('dog-pedigree').value = dog.pedigree ? 'true' : 'false';
+        document.getElementById('dog-pedigree').value = dog.pedigree || 'nao';
         document.getElementById('dog-detalhes').value = dog.detalhes || '';
         document.getElementById('dog-preco').value = dog.preco ?? '';
         document.getElementById('dog-disponibilidade').value = dog.disponibilidade;
@@ -1177,7 +1300,7 @@
         document.getElementById('dog-genero').value = 'macho';
         document.getElementById('dog-pelo').value = 'curto';
         document.getElementById('dog-cor-pelagem').value = '';
-        document.getElementById('dog-pedigree').value = 'false';
+        document.getElementById('dog-pedigree').value = 'nao';
         document.getElementById('dog-detalhes').value = '';
         document.getElementById('dog-preco').value = '';
         document.getElementById('dog-disponibilidade').value = 'disponivel';
@@ -1200,7 +1323,7 @@
         genero: document.getElementById('dog-genero').value,
         pelo: document.getElementById('dog-pelo').value,
         cor_pelagem: document.getElementById('dog-cor-pelagem').value,
-        pedigree: document.getElementById('dog-pedigree').value === 'true',
+        pedigree: document.getElementById('dog-pedigree').value,
         detalhes: document.getElementById('dog-detalhes').value,
         preco: document.getElementById('dog-preco').value,
         disponibilidade: document.getElementById('dog-disponibilidade').value,
@@ -1341,9 +1464,17 @@
     async function saveSupabaseConfig() {
       const url = document.getElementById('supabase-url').value;
       const key = document.getElementById('supabase-key').value;
+      const configChanged = url !== localStorage.getItem('vt_supabase_url') ||
+        key !== localStorage.getItem('vt_supabase_key');
 
       localStorage.setItem('vt_supabase_url', url);
       localStorage.setItem('vt_supabase_key', key);
+      if (configChanged) {
+        clearSupabaseSession();
+        isAdminLoggedIn = false;
+        document.getElementById('admin-dashboard-view').classList.add('hidden');
+        document.getElementById('admin-login-view').classList.remove('hidden');
+      }
       await loadSupabaseData();
     }
 
@@ -1362,6 +1493,7 @@
     // INITIALIZE APP
     window.onload = async function() {
       initSupabaseConfig();
+      await restoreAdminSession();
       await loadSupabaseData();
     }
   </script>
