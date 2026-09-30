@@ -226,7 +226,7 @@
     </section>
 
     <!-- FILHOTES DISPONÍVEIS (CATÁLOGO) -->
-    <section id="filhotes" class="py-10 bg-brand-50">
+    <section id="filhotes" class="py-10 bg-brand-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
@@ -1284,17 +1284,21 @@
         };
         const [badgeColor, statusLabel] = statusLabels[dog.disponibilidade] || statusLabels.disponivel;
         const ageLabel = dog.idade_meses ? `${dog.idade_meses} ${dog.idade_meses === 1 ? 'mês' : 'meses'}` : 'Idade não informada';
-        const msgWhatsapp = encodeURIComponent('Olá! Vim pelo site e gostaria de falar sobre os Chihuahuas Valle Tanti Auguri');
+        const generoLabel = dog.genero === 'femea' ? 'Fêmea' : 'Macho';
+        const peloLabel = dog.pelo === 'longo' ? 'Pelo longo' : 'Pelo curto';
+        const msgWhatsapp = encodeURIComponent(
+          `Olá! Gostaria de mais informações sobre o filhote ${dog.nome}. Sexo: ${generoLabel}. Pelagem: ${peloLabel}. Cor: ${dog.cor_pelagem || 'Não informada'}.`
+        );
 
         return `
-          <div class="bg-white rounded-2xl overflow-hidden border border-brand-200 hover:shadow-xl transition-all flex flex-col justify-between group">
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-300 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group">
             <div class="relative overflow-hidden">
               <img src="${dog.foto || 'https://images.unsplash.com/photo-1591824438708-ce405f36ba3d?auto=format&fit=crop&w=600&q=80'}" alt="${dog.nome}" loading="lazy" decoding="async" class="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-500">
               <span class="absolute top-3 right-3 text-[11px] font-bold text-white px-2.5 py-1 rounded-full shadow-md ${badgeColor}">${statusLabel}</span>
               <span class="absolute bottom-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-[10px] px-2.5 py-1 rounded-md font-semibold">${ageLabel}</span>
             </div>
 
-            <div class="p-5 flex-1 flex flex-col justify-between space-y-4 bg-brand-100">
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4 bg-white">
               <div>
                 <div class="flex items-center justify-between mb-1">
                   <h3 class="font-serif font-bold text-lg text-brand-900">${dog.nome}</h3>
@@ -1373,7 +1377,7 @@
             </div>
             ${dog.detalhes ? `<p class="text-xs text-brand-700 bg-brand-50 p-3 rounded-lg border border-brand-200">${dog.detalhes}</p>` : ''}
             <a href="https://wa.me/5511913153403?text=${msgWhatsapp}" target="_blank" class="w-full py-3 bg-[#25D366] hover:bg-[#1FAE55] text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-lg transition-colors">
-              <i class="fa-brands fa-whatsapp text-lg"></i> Falar com o Criador no WhatsApp
+              <i class="fa-brands fa-whatsapp text-lg"></i> Falar com o Consultor no WhatsApp
             </a>
           </div>
         </div>
