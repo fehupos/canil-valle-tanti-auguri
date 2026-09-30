@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Canil Valle Tanti Auguri | Especializado em Chihuahuas em Guarulhos - SP</title>
+  <link rel="icon" type="image/svg+xml" href="https://lhinolmdpaonyuxbgzbw.supabase.co/storage/v1/object/public/puppy-photos/site/12.svg">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -61,6 +62,72 @@
     .font-serif {
       font-family: 'Cinzel', serif;
     }
+    .header-logo-strip {
+      transition: height 300ms ease, border-width 300ms ease;
+    }
+    #header-logo {
+      position: absolute;
+      z-index: 50;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(90vw, 272px);
+      height: 136px;
+      overflow: hidden;
+      transition: top 300ms ease, left 300ms ease, width 300ms ease, height 300ms ease, transform 300ms ease;
+    }
+    @media (min-width: 640px) {
+      #header-logo {
+        width: 160px;
+        height: 80px;
+      }
+    }
+    #header-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      transform: scale(1.4);
+      transform-origin: center;
+      mix-blend-mode: multiply;
+      opacity: 0.9;
+      transition: transform 300ms ease, filter 300ms ease, opacity 300ms ease;
+    }
+    @media (min-width: 640px) {
+      #header-logo img {
+        transform: scale(2);
+      }
+    }
+    .site-main {
+      transition: padding-top 300ms ease;
+    }
+    #site-header.is-scrolled + .site-main {
+      padding-top: 57px;
+    }
+    #site-header.is-scrolled .header-logo-strip {
+      height: 0;
+      border-bottom-width: 0;
+    }
+    #site-header.is-scrolled #header-logo {
+      top: 4px;
+      left: max(calc((100vw - 80rem) / 2 + 1rem), 1rem);
+      width: 104px;
+      height: 52px;
+      transform: none;
+    }
+    #site-header.is-scrolled #header-logo img {
+      transform: scale(2);
+      filter: brightness(0) invert(1);
+      mix-blend-mode: normal;
+      opacity: 1;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .header-logo-strip,
+      #header-logo,
+      #header-logo img {
+        transition-duration: 0.01ms;
+      }
+    }
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
@@ -100,12 +167,11 @@
   <!-- HEADER / NAVBAR -->
 
   
-  <header class="fixed top-0 left-0 w-full z-40 bg-brand-800 border-b border-brand-700 transition-all duration-300">
-    <div class="flex items-center justify-center border-b border-brand-200 bg-white py-2">
-      <a href="#" class="group">
-        <img src="https://imgh.in/host/uayvx9" alt="Logomarca Oficial Canil Valle Tanti Auguri" class="block h-[120px] w-[220px] object-contain mix-blend-multiply opacity-90 sm:h-16 sm:w-36">
-      </a>
-    </div>
+  <header id="site-header" class="fixed top-0 left-0 w-full z-40 bg-brand-800 border-b border-brand-700 transition-all duration-300">
+    <div class="header-logo-strip h-[136px] border-b border-brand-200 bg-white sm:h-20"></div>
+    <a id="header-logo" href="#" class="group">
+      <img src="https://lhinolmdpaonyuxbgzbw.supabase.co/storage/v1/object/public/puppy-photos/site/2.svg" alt="Logomarca Oficial Canil Valle Tanti Auguri" class="block h-full w-full">
+    </a>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center">
       
       <!-- Logo -->
@@ -159,7 +225,7 @@
     </div>
   </header>
 
-  <main class="pt-[180px] sm:pt-[138px]">
+  <main class="site-main pt-[193px] sm:pt-[137px]">
     <!-- HERO SECTION -->
     <section id="inicio" class="relative overflow-hidden">
       <div class="relative isolate flex min-h-[640px] items-center overflow-hidden bg-brand-900 sm:min-h-[620px] lg:min-h-[600px]">
@@ -1930,6 +1996,13 @@
       const menu = document.getElementById('mobile-menu');
       menu.classList.toggle('hidden');
     }
+
+    function updateHeaderOnScroll() {
+      document.getElementById('site-header').classList.toggle('is-scrolled', window.scrollY > 24);
+    }
+
+    window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+    updateHeaderOnScroll();
 
     function scrollInstagramStories(direction) {
       const track = document.getElementById('instagram-stories-track');
