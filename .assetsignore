@@ -1,0 +1,7 @@
+src
+supabase
+wrangler.jsonc
+package-lock.json
+.assetsignore
+functions
+_redirects
