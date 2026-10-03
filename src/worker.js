@@ -4,7 +4,7 @@ const ORIGIN = 'https://valletantiauguri.com.br';
 
 function supabaseGet(query) {
   return fetch(`${SUPABASE_REST}/${query}`, {
-    headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` }
+    headers: { apikey: SUPABASE_KEY }
   });
 }
 
