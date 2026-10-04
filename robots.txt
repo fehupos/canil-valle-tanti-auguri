@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /clientes/
+
+Sitemap: https://valletantiauguri.com.br/sitemap.xml
+
